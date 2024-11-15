@@ -1,0 +1,12 @@
+@import "react-awesome-slider/dist/styles.css";
+
+.header {
+  height: 500px;
+  overflow: hidden;
+}
+
+.header img {
+  width: 100%;
+  height: auto;
+  object-fit: contain;
+}

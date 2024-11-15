@@ -1,0 +1,67 @@
+@import url("https://fonts.googleapis.com/css2?family=Afacad+Flux:wght@100..1000&family=Edu+AU+VIC+WA+NT+Pre:wght@400..700&display=swap");
+
+.navbar {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 10px;
+  font-size: 20px;
+  font-family: "Edu AU VIC WA NT Pre", cursive;
+  background-color: grey;
+  position: sticky;
+  top: 0;
+  z-index: 1000;
+}
+
+.navbar .left {
+  font-weight: 800;
+}
+
+.navbar .left span {
+  color: yellow;
+}
+
+.navbar .right ul {
+  display: flex;
+  list-style: none;
+  gap: 15px;
+}
+
+.navbar .right ul li {
+  cursor: pointer;
+}
+.navbar .right ul li a {
+  text-decoration: none;
+  color: black;
+}
+
+.mobile-menu-icon {
+  display: none;
+  background: none;
+  border: none;
+  font-size: 1.5rem;
+  color: #fff;
+  cursor: pointer;
+}
+
+@media (max-width: 768px) {
+  .navbar .right ul {
+    display: none;
+  }
+
+  .navbar .right.mobile-menu ul {
+    display: flex;
+    flex-direction: column;
+    gap: 15px;
+    position: absolute;
+    top: 50px;
+    right: 10px;
+    background-color: grey;
+    padding: 15px;
+    border-radius: 8px;
+  }
+
+  .mobile-menu-icon {
+    display: block;
+  }
+}

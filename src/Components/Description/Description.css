@@ -1,0 +1,42 @@
+.description-container {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 20px;
+  padding: 30px;
+  margin: 20px 0;
+  transition: all 0.3s ease;
+}
+
+.description-container.reverse {
+  flex-direction: row-reverse;
+}
+
+.description-text {
+  flex: 1;
+  font-size: 16px;
+  line-height: 1.6;
+}
+
+.description-text h2 {
+  font-size: 24px;
+  font-weight: bold;
+  margin-bottom: 15px;
+}
+
+.description-text p {
+  color: #555;
+}
+
+.description-image {
+  flex: 1;
+  text-align: center;
+}
+
+.description-image img {
+  width: 100%;
+  max-width: 500px;
+  height: auto;
+  object-fit: cover;
+  border-radius: 8px;
+}
