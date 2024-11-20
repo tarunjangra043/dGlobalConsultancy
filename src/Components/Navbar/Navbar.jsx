@@ -2,33 +2,74 @@ import React, { useState } from "react";
 import "./Navbar.css";
 
 const Navbar = () => {
-  const [isMobileMenuOpen, setIsMobileMenuOpen] = useState(false);
+  const [menuOpen, setMenuOpen] = useState(false);
 
-  const toggleMobileMenu = () => {
-    setIsMobileMenuOpen(!isMobileMenuOpen);
+  const toggleMenu = () => {
+    setMenuOpen(!menuOpen);
   };
 
   return (
-    <div className="navbar">
-      <div className="left">
-        D <span>Global</span> Consultancy
+    <div>
+      <nav id="navbar">
+        <div className="nav-wrapper">
+          <div className="logo">
+            <a href="#home">
+              <i className="fas fa-chess-knight"></i> D Global
+            </a>
+          </div>
+
+          <ul
+            id="menu"
+            className={!menuOpen ? "menu-desktop" : "hide-on-mobile"}
+          >
+            <li>
+              <a href="#home">Home</a>
+            </li>
+            <li>
+              <a href="#services">Services</a>
+            </li>
+            <li>
+              <a href="#about">About</a>
+            </li>
+            <li>
+              <a href="#contact">Contact</a>
+            </li>
+          </ul>
+        </div>
+      </nav>
+
+      <div
+        className={`menuIcon ${menuOpen ? "toggle" : ""}`}
+        onClick={toggleMenu}
+      >
+        <span className="icon icon-bars"></span>
+        <span className="icon icon-bars overlay"></span>
       </div>
-      <div className={`right ${isMobileMenuOpen ? "mobile-menu" : ""}`}>
+
+      <div className={`overlay-menu ${menuOpen ? "open" : ""}`}>
         <ul>
           <li>
-            <a href="">Home</a>
+            <a href="#home" onClick={toggleMenu}>
+              Home
+            </a>
           </li>
           <li>
-            <a href="">About</a>
+            <a href="#services" onClick={toggleMenu}>
+              Services
+            </a>
           </li>
           <li>
-            <a href="">Contact</a>
+            <a href="#about" onClick={toggleMenu}>
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#contact" onClick={toggleMenu}>
+              Contact
+            </a>
           </li>
         </ul>
       </div>
-      <button className="mobile-menu-icon" onClick={toggleMobileMenu}>
-        {isMobileMenuOpen ? "✕" : "☰"}
-      </button>
     </div>
   );
 };

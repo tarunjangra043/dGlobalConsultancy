@@ -1,16 +1,16 @@
 import "./App.css";
-import Cards from "./Components/Cards/Cards";
 import Description from "./Components/Description/Description";
 import Footer from "./Components/Footer/Footer";
 import Header from "./Components/Header/Header";
 import Navbar from "./Components/Navbar/Navbar";
+import ProductContainer from "./Components/ProductContainer/ProductContainer";
 
 function App() {
   return (
     <>
       <Navbar />
       <Header />
-      <Cards />
+      <ProductContainer />
       <Description
         title="Great Product"
         description="This product is excellent for everyday use, offering high performance and reliability."

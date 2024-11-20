@@ -1,10 +1,10 @@
 .description-container {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  /* justify-content: space-between; */
   gap: 20px;
   padding: 30px;
-  margin: 20px 0;
+  margin: 30px;
   transition: all 0.3s ease;
 }
 
@@ -26,11 +26,6 @@
 
 .description-text p {
   color: #555;
-}
-
-.description-image {
-  flex: 1;
-  text-align: center;
 }
 
 .description-image img {

@@ -1,42 +1,23 @@
-import { Swiper, SwiperSlide } from "swiper/react";
-import "swiper/swiper-bundle.css";
-import { Autoplay } from "swiper/modules";
-import "./Header.css";
-
 import React from "react";
+import "./Header.css";
 
 const Header = () => {
   return (
     <div className="header">
-      <Swiper
-        modules={[Autoplay]}
-        spaceBetween={30}
-        slidesPerView={1}
-        autoplay={{
-          delay: 3000,
-          disableOnInteraction: false,
-        }}
-        loop={true}
-      >
-        <SwiperSlide>
-          <img
-            src="https://naviant.com/wp-content/uploads/2022/06/What-to-Look-for-in-a-Managed-Services-Provider.jpg"
-            alt="Slide 1"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://evotecplus.com.au/wp-content/uploads/2023/01/E-router-Management.png"
-            alt="Slide 2"
-          />
-        </SwiperSlide>
-        <SwiperSlide>
-          <img
-            src="https://images.idgesg.net/images/article/2017/06/connect-gateway-to-router-100726042-large.jpg"
-            alt="Slide 2"
-          />
-        </SwiperSlide>
-      </Swiper>
+      <div className="header-contents">
+        <h2>
+          Internet Service <br /> We Are Providing
+        </h2>
+        <p>
+          Explore our diverse range of internet services, designed to meet your
+          connectivity needs with speed, reliability, and unmatched customer
+          support. Whether you're looking for high-speed broadband, flexible
+          plans, or robust security features, we're here to deliver the best
+          internet experience, ensuring you stay connected with the world
+          effortlessly.
+        </p>
+        <button>View Services</button>
+      </div>
     </div>
   );
 };
