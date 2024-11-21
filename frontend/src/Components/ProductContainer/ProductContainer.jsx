@@ -1,11 +1,12 @@
 import React, { useEffect, useState } from "react";
 import Card from "../Cards/Card";
+import { toast } from "react-toastify";
 
 const ProductContainer = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:5000/api")
+    fetch("https://dglobalconsultancy.onrender.com/api")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched products:", data);
@@ -15,7 +16,7 @@ const ProductContainer = () => {
   }, []);
 
   const handlePurchase = (productId, email, days) => {
-    fetch("http://localhost:5000/api/purchase", {
+    fetch("https://dglobalconsultancy.onrender.com/api/purchase", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ productId, email, days }),
@@ -32,12 +33,12 @@ const ProductContainer = () => {
       })
       .catch((err) => {
         console.error("Purchase error:", err);
-        alert("An error occurred during purchase.");
+        toast.error("An error occurred during purchase.");
       });
   };
 
   const handleRenew = (productId, days) => {
-    fetch("http://localhost:5000/api/renew", {
+    fetch("https://dglobalconsultancy.onrender.com/api/renew", {
       method: "POST",
       headers: { "Content-Type": "application/json" },
       body: JSON.stringify({ productId, days }),
@@ -54,7 +55,7 @@ const ProductContainer = () => {
       })
       .catch((err) => {
         console.error("Renew error:", err);
-        alert("An error occurred during renewal.");
+        toast.error("An error occurred during renewal.");
       });
   };
 

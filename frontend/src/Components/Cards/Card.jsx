@@ -60,7 +60,7 @@ const Card = ({ product, onPurchase, onRenew }) => {
 
   const handleSubmit = () => {
     if (!email || !days) {
-      alert("Please fill in all required fields.");
+      toast.error("Please fill in all required fields.");
       return;
     }
     toast.success("Congrats🎉 Thanks for Purchasing!");
