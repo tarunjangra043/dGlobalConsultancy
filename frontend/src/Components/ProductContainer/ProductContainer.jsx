@@ -6,7 +6,7 @@ const ProductContainer = () => {
   const [products, setProducts] = useState([]);
 
   useEffect(() => {
-    fetch("https://dglobalconsultancy.onrender.com/api", { mode: 'no-cors' })
+    fetch("https://dglobalconsultancy.onrender.com/api")
       .then((res) => res.json())
       .then((data) => {
         console.log("Fetched products:", data);
