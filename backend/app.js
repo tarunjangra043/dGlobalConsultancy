@@ -6,7 +6,7 @@ const { productRoute } = require("./routes/productRoute");
 const app = express();
 
 // Middleware
-app.use(cors());
+app.use(cors({ origin: 'https://d-global-consultancy.vercel.app' }));
 app.use(bodyParser.json());
 
 // Routes
